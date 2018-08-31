@@ -1,0 +1,19 @@
+name: mscx  # Mediterranean School of Complex Networks
+channels:
+- defaults
+- conda-forge
+dependencies:
+- python=3.6
+- matplotlib
+- networkx
+- scipy
+- numpy
+- nxviz
+- hiveplot
+- jupyter
+- jupyterlab
+- ipykernel
+- pandas
+- rise
+- python-louvain
+- tqdm
