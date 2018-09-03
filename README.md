@@ -36,9 +36,9 @@ If you don't want the hassle of getting setup, you can use the Binder service to
 
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/leriomaggio/network-analysis-mscx18/master)
 
-### Setup the Environment
+## Set up the Environment
 
-#### Clone this repo
+### 1. Clone this repo
 
 <img src="images/github.jpg" />
 
@@ -46,9 +46,9 @@ If you don't want the hassle of getting setup, you can use the Binder service to
 git clone https://github.com/leriomaggio/network-analysis-mscx18.git
 ```
 
-#### Requirements
+### 2. Install Requirements
 
-This tutorial will use Python 3
+This tutorial will use **Python 3**
 
 This tutorial requires the following packages:
 
