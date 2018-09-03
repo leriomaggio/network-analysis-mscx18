@@ -1,3 +1,13 @@
+"""
+Python module containing utility functions to load the different 
+datasets we will be using during the tutorial.
+
+Most of the dataset have been gathered from the Konect network analysis repository
+(http://konect.uni-koblenz.de)
+
+Original version: https://github.com/ericmjl/Network-Analysis-Made-Simple/blob/master/custom/load_data.py
+"""
+
 import gzip
 import json
 
@@ -7,6 +17,19 @@ from tqdm import tqdm
 
 
 def load_seventh_grader_network():
+    """
+    Load the Seventh Grader Network: http://konect.uni-koblenz.de/networks/moreno_seventh
+    
+    DESCRIPTION:
+    ===========
+    This directed network contains proximity ratings between studetns from 29 seventh grade students 
+    from a school in Victoria. Among other questions the students were asked to nominate 
+    their preferred classmates for three different activities. 
+    A node represents a student. An edge between two nodes shows that the left student 
+    picked the right student as his answer. 
+    The edge weights are between 1 and 3 and show how often the left student chose the right student 
+    as his favourite.
+    """
     # Read the edge list
     df = pd.read_csv('datasets/moreno_seventh/out.moreno_seventh_seventh',
                      skiprows=2, header=None, sep=' ')
@@ -46,6 +69,19 @@ def load_facebook_network():
 
 
 def load_sociopatterns_network():
+    """
+    Load the Infectious Network: http://konect.uni-koblenz.de/networks/sociopatterns-infectious
+    
+    DESCRIPTION:
+    ===========
+    This network describes the face-to-face behavior of people during the exhibition 
+    INFECTIOUS: STAY AWAY in 2009 
+    at the Science Gallery in Dublin. 
+    Nodes represent exhibition visitors; edges represent face-to-face contacts 
+    that were active for at least 20 seconds. 
+    Multiple edges between two nodes are possible and denote multiple contacts. 
+    The network contains the data from the day with the most interactions.
+    """
     # Read the edge list
 
     df = pd.read_csv(
@@ -70,8 +106,21 @@ def load_sociopatterns_network():
 
 
 def load_physicians_network():
+    """
+    Load the Physicians Network: http://konect.uni-koblenz.de/networks/moreno_innovation
+    
+    DESCRIPTION:
+    ===========
+    This directed network captures innovation spread among 246 physicians in for towns in 
+    Illinois, Peoria, Bloomington, Quincy and Galesburg. The data was collected in 1966. 
+    A node represents a physician and an edge between two physicians shows that the left 
+    physician told that the righ physician is his friend or that he turns 
+    to the right physician if he needs advice or is interested in a discussion. 
+    There always only exists one edge between two nodes 
+    even if more than one of the listed conditions are true.
+    """
+    
     # Read the edge list
-
     df = pd.read_csv(
         'datasets/moreno_innovation/out.moreno_innovation_innovation',
         sep=' ', skiprows=2, header=None)
@@ -86,7 +135,18 @@ def load_physicians_network():
 
 
 def load_propro_network():
-    propro = pd.read_csv('datasets/moreno_propro/out.moreno_propro_propro.txt', skiprows=2, header=None, delimiter=' ')
+    """
+    Load the Protein-Protein Interaction Network: http://konect.uni-koblenz.de/networks/moreno_propro
+    
+    DESCRIPTION:
+    ===========
+    This undirected network contains protein interactions contained in yeast. 
+    Research showed that proteins with a high degree were more important for the surivial 
+    of the yeast than others. 
+    A node represents a protein and an edge represents a metabolic interaction between two proteins. The network contains loops.
+    """
+    propro = pd.read_csv('datasets/moreno_propro/out.moreno_propro_propro.txt', 
+                         skiprows=2, header=None, delimiter=' ')
     propro.columns = ['prot1_id', 'prot2_id']
     G = nx.Graph()
     G.add_edges_from(zip(propro['prot1_id'], propro['prot2_id']))
@@ -95,6 +155,17 @@ def load_propro_network():
 
 
 def load_crime_network():
+    """
+    Load the Crime Network: http://konect.uni-koblenz.de/networks/moreno_crime
+    
+    DESCRIPTION:
+    ===========
+    This bipartite network contains persons who appeared in at least one crime case as either a suspect, a victim, 
+    a witness or both a suspect and victim at the same time. 
+    A left node represents a person and a right node represents a crime. 
+    An edge between two nodes shows that the left node was involved in the crime represented by the right node.
+    
+    """
     df = pd.read_csv('datasets/moreno_crime/out.moreno_crime_crime',
                      sep=' ', skiprows=2, header=None)
     df = df[[0, 1]]
@@ -160,3 +231,4 @@ def load_amazon_reviews():
         G.add_edge(d['reviewerID'], d['asin'])
 
     return G
+
