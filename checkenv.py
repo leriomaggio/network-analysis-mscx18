@@ -12,7 +12,7 @@ def check_import(packagename):
 
 # If there are new packages that you can import, add them to the list.
 package_names = ['networkx', 'numpy', 'matplotlib', 'hiveplot', 'pandas',
-                'jupyter', 'nxviz', 'tqdm']
+                'jupyter', 'nxviz', 'tqdm', 'bokeh']
 packages = {n:n for n in package_names}
 # Only add the packages whose import names are different from the 
 # package name (what we `pip install` or `conda install`).

@@ -65,6 +65,7 @@ This tutorial requires the following packages:
 - `jupyter==1.0.0`
 - `scipy==1.1.0`
 - `python-louvain==0.11`
+- `bokeh==0.13.0`
 
 #### Easiest way: Anaconda Distribution of Python
 
@@ -74,7 +75,11 @@ If you have the Anaconda distribution of **Python 3** installed on a Unix-like m
 2. `$ source activate nams`
 3. `$ python checkenv.py`
 
-If you do not have the Anaconda distribution, I would highly recommend getting it for [Windows][1], [Mac][2] or [Linux][3]. It provides an isolated Python computing environment that will not interfere with your system Python installation, and comes with a very awesome package manager (`conda`) that makes installation of new packages a single `conda install pkgname` away.
+If you do not have the Anaconda distribution, I would highly recommend getting it for 
+[Windows][1], [Mac][2] or [Linux][3]. It provides an isolated Python computing environment 
+that will not interfere with your system Python installation, and comes with a very 
+awesome package manager (`conda`) that makes installation of new packages a single `conda 
+install pkgname` away.
 
 #### Alternative to Anaconda: `pip install`
 

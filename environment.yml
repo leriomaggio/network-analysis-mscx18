@@ -17,3 +17,4 @@ dependencies:
 - rise
 - python-louvain
 - tqdm
+- bokeh
