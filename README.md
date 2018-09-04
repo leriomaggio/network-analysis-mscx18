@@ -72,7 +72,7 @@ This tutorial requires the following packages:
 If you have the Anaconda distribution of **Python 3** installed on a Unix-like machine (Linux, macOS, etc.), then run `make conda`, which wraps the commands below.
 
 1. `$ conda env create -f environment.yml`
-2. `$ source activate nams`
+2. `$ source activate mscx`
 3. `$ python checkenv.py`
 
 If you do not have the Anaconda distribution, I would highly recommend getting it for 
