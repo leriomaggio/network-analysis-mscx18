@@ -26,12 +26,13 @@ def print_error(p, i):
     :param str p: The name of the package to install.
     :param str i: The name of the package when imported.
     """
-    error_message = f"""
+    
+    error_message = '''
     {i} not present. Please do the installation using either:
 
     - pip install {p}
     - conda install -c conda-forge {p}
-    """
+    '''.format(p=p, i=i)
     return error_message
 
 
