@@ -4,7 +4,7 @@
 
 <img src="images/mscx_logo.png" width="25%" >
 
-### Author: Valerio Maggio
+### Lecturer: Valerio Maggio
 
 ### _PostDoc Data Scientist @ FBK/MPBA_
 
@@ -107,11 +107,10 @@ Run `make venv`, which wraps up the commands below.
 1. [Divvy Data Challenge](https://www.divvybikes.com/datachallenge)
 1. [Konect Network Analysis Datasets](http://konect.uni-koblenz.de/networks/)
 
-## Resources
+# Credits
 
-1. Jon Charest's use of Circos plots to visualize networks of Metal music genres. [blog post][5] | [notebook][6]
-1. Gain further practice by taking this course online at [DataCamp](http://www.datacamp.com/)!
-1. A gentle introduction to graph theory on [Vaidehi Joshi's website](https://dev.to/vaidehijoshi/a-gentle-introduction-to-graph-theory)
+This material has been adapted from the tutorial *Network Analysis Made Simple* created by Eric Ma @ericmjl and Mridul Seth @MridulS. 
+The original material can be found at: https://github.com/ericmjl/Network-Analysis-Made-Simple/.
 
 [1]: http://repo.continuum.io/archive/Anaconda3-4.0.0-Windows-x86_64.exe
 [2]: http://repo.continuum.io/archive/Anaconda3-4.0.0-MacOSX-x86_64.pkg
