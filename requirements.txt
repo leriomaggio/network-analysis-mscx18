@@ -5,6 +5,6 @@ hiveplot==2017.10.17.21.7
 nxviz==0.5.0
 numpy==1.22.0
 jupyter==1.0.0
-scipy==1.1.0
+scipy==1.10.0
 python-louvain==0.11
 bokeh==0.13.0
